@@ -35,8 +35,8 @@ const addProduct = (
     `${apiEndpoint}/product/create`,
     {
       name,
-      newPrice,
-      newStorage,
+      price: newPrice,
+      storage: newStorage,
       typeKey,
       typeName,
       image
@@ -59,8 +59,8 @@ const editProduct = (
     `${apiEndpoint}/product/update/${id}`,
     {
       name,
-      newPrice,
-      newStorage,
+      price: newPrice,
+      storage: newStorage,
       typeKey,
       typeName,
       image
