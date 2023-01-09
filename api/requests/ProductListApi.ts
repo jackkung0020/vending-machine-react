@@ -29,12 +29,14 @@ const addProduct = (
   typeName: string,
   image: string,
 ): Promise<String> => {
+  const newPrice = price.toString()
+  const newStorage = storage.toString()
   return HttpUtils.post<String>(
     `${apiEndpoint}/product/create`,
     {
       name,
-      price,
-      storage,
+      newPrice,
+      newStorage,
       typeKey,
       typeName,
       image
@@ -51,12 +53,14 @@ const editProduct = (
   typeName: string,
   image: string,
 ): Promise<String> => {
+  const newPrice = price.toString()
+  const newStorage = storage.toString()
   return HttpUtils.post<String>(
     `${apiEndpoint}/product/update/${id}`,
     {
       name,
-      price,
-      storage,
+      newPrice,
+      newStorage,
       typeKey,
       typeName,
       image

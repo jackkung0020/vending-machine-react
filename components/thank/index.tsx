@@ -80,7 +80,7 @@ const ThankComponent : FC<IResultProps> = ({
     const timer = setTimeout(() => {
       setWallet(0)
       return router.push(`/`)
-    }, 4000);
+    }, 8000);
   }, []);
 
   const renderMoney = useMemo(() => { 
