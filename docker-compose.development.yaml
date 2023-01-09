@@ -4,7 +4,7 @@ services:
     command: npm run dev
     container_name: vending-docker-development
     environment:
-      - API_URL=http://127.0.0.1:8000/api/
+      - FE_API=http://127.0.0.1:8000/api/
     volumes:
       - ./:/vending
       - /vending/node_modules
