@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
+import { Button, Card } from 'antd';
 
 export const StyledContainer = styled.section`
   padding: 1rem;
@@ -240,6 +240,13 @@ export const StyledDiv = styled.div`
   justify-content: flex-start;
 `;
 
+export const StyledDivCard = styled(Card)`
+  padding: 20px;
+  .ant-card-body {
+    display: none;
+  }
+`;
+
 export const StyledDivMargin = styled.div`
   display: flex;
   margin-bottom: 30px;
@@ -250,7 +257,7 @@ export const StyledDivMargin = styled.div`
   justify-content: space-around;
 `;
 
-export const StyledDivRoot = styled.div`
+export const StyledDivRoot = styled(StyledHoldingMessage)`
   width: 100%;
   display: flex;
   flex-direction: row;

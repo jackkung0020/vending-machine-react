@@ -3,7 +3,6 @@
 /* eslint-disable max-len */
 import React, { useMemo, FC, memo, useState, useEffect, useCallback } from 'react';
 import { useWalletContext } from "../../context/wallet";
-import { Card } from 'antd';
 import { useRouter } from 'next/router'
 import {
   StyledHeader,
@@ -17,7 +16,8 @@ import {
   BlockDetails,
   StyleText,
   StyleBockButton,
-  StyleTextLine
+  StyleTextLine,
+  StyledDivCard
 } from './shopping.style';
 import API from '@Adapter/ProductListApi'
 import { IGetProductListResponse } from '@Models/ProductListModel'
@@ -65,19 +65,20 @@ const ShoppingComponent : FC<IShoppingProps> = ({
     return  (
     <StyledDivRoot>
       <StyledDivMargin>
-        <Card
-          hoverable
-          style={{ width: 240 }}
+        <StyledDivCard
+          style={{ width: '240px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center' }}
           cover={<img alt="example" 
           style={{ 
-            maxHeight: '255px',
+            height: 'auto',
             width: '100%',
             margin: 'auto', 
           }} 
           src={data?.image} />}
-        >
-          {/* <Meta title={data?.name} description={data?.price} /> */}
-        </Card>
+        />
         <BlockDetails>
           <StyleTextLine>
             <StyleText style={{color: 'black'}}> You Wallet</StyleText>
